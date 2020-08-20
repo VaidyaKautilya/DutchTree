@@ -1,0 +1,37 @@
+﻿body {
+    font-family: sans-serif
+}
+input, textarea {
+    font-size: 18px;
+    width: 200px;
+}
+
+input[type=submit] {
+    width: auto;
+}
+label {
+    font-size: 16px;
+}
+
+#theForm {
+    background-color: #d0d0d0;
+}
+#theForm input[type=submit] {
+    background-color: green;
+    color:white
+}
+.product-info {
+    border: 3px solid grey;
+    display: inline-block;
+    padding: 8px 2px;
+    margin: 2px;
+    width: 450px;
+}
+.product-info img {
+    margin: 3px;
+    float: left;
+}
+
+menu li {
+    display: inline;
+}
