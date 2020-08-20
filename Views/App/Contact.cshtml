@@ -1,29 +1,35 @@
 ﻿@model ContactViewModel
 <h2>@ViewBag.Title</h2>
 
+
+@section Scripts{
+    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+}
 <div id="theForm">
     <form method="post">
         <div asp-validation-summary="All"></div>
         <label asp-for="Name">Your Name:</label>
-        <br/>
-        <input type="text" asp-for="Name"/>
-        <br/>
-        <br/>
+        <br />
+        <input type="text" asp-for="Name" />
+        <br />
+        <br />
         <label asp-for="Email">Email :</label>
-        <br/>
-        <input type="email" asp-for="Email"/>
-        <br/>
-        <br/>
+        <br />
+        <input asp-for="Email" />
+        <br />
+        <br />
         <label asp-for="Subject">Subject : </label>
-        <br/>
-        <input type="text" asp-for="Subject" required="required"/>
-        <br/>
-        <br/>
-        <label asp-for="Message">Message</label><br/>
+        <br />
+        <input type="text" asp-for="Subject" />
+        <br />
+        <br />
+        <label asp-for="Message">Message</label><br />
         <textarea asp-for="Message" rows="4"></textarea>
-        <br/>
-        <br/>
+        <br />
+        <br />
 
-        <input type="submit" value="send message"/>
+        <input type="submit" value="send message" />
+        <div>@ViewBag.Message</div>
     </form>
 </div>

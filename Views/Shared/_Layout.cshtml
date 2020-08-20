@@ -6,9 +6,10 @@
     <title>@ViewBag.Title</title>
 
     <link href="css/style.css" rel="stylesheet" />
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
+    <header class="container">
         <h1>Welcome to dutch Treat</h1>
     </header>
     <menu>
@@ -18,14 +19,17 @@
             <li><a asp-controller="App" asp-action="About">About</a></li>
         </ul>
     </menu>
-    <section>
+    <section class="container">
         <h1>@ViewBag.Title</h1>
         @RenderBody()
     </section>
-    <footer>Copyright 2020 Dutch Treat CCL</footer>
+<footer class="container">
+    <div>Copyright 2020 Dutch Treat CCL</div>
+</footer>
 
-    <script src="js/index.js"></script>
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-    @RenderSection("scripts",false)
+    <script src="~/js/index.js"></script>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("scripts", false)
 </body>
 </html>
