@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DutchConnectionString": "Data Source=DESKTOP-Q8N32B2;Initial Catalog=DutchTreatDb;Integrated Security=True;MultipleActiveResultSets=true;"
+  }
+}
