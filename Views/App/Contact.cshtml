@@ -1,35 +1,48 @@
 ﻿@model ContactViewModel
-<h2>@ViewBag.Title</h2>
 
 
 @section Scripts{
     <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
 }
-<div id="theForm">
-    <form method="post">
-        <div asp-validation-summary="All"></div>
-        <label asp-for="Name">Your Name:</label>
-        <br />
-        <input type="text" asp-for="Name" />
-        <br />
-        <br />
-        <label asp-for="Email">Email :</label>
-        <br />
-        <input asp-for="Email" />
-        <br />
-        <br />
-        <label asp-for="Subject">Subject : </label>
-        <br />
-        <input type="text" asp-for="Subject" />
-        <br />
-        <br />
-        <label asp-for="Message">Message</label><br />
-        <textarea asp-for="Message" rows="4"></textarea>
-        <br />
-        <br />
 
-        <input type="submit" value="send message" />
-        <div>@ViewBag.Message</div>
-    </form>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card card-body bg-light">
+            <form method="post">
+                
+
+                <div class="form-group">
+                    <label asp-for="Name">Your Name:</label>
+                    <input type="text" asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Email">Email :</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Subject">Subject : </label>
+                    <input type="text" asp-for="Subject" class="form-control" />
+                    <span asp-validation-for="Subject" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Message">Message</label><br />
+                    <textarea asp-for="Message" rows="4" class="form-control"></textarea>
+                    <span asp-validation-for="Message" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="send message" class="btn btn-block btn-info" />
+                    <div>@ViewBag.Message</div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
